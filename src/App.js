@@ -11,7 +11,7 @@ function App() {
     const lower = (220-age)*0.65
     setHeartrate(lower.toFixed()+"-"+upper.toFixed())
   }
-  //asiaa
+  //asiaasadsadasd
   return (
     <div className='tausta'>
       <h2>Heart rate limits calculator</h2>
