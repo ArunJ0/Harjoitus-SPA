@@ -1,32 +1,30 @@
+import React from 'react';
 import './App.css';
-import { useState } from 'react';
+
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
+import ContactUs from './components/ContactUs';
+import NotFound from './components/NotFound';
+import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [age,setage] = useState('')
-  const [heartrate,setHeartrate] = useState(0)
-
-  const calculate = (e) => {
-    e.preventDefault()
-    const upper = (220-age)*0.85
-    const lower = (220-age)*0.65
-    setHeartrate(lower.toFixed()+"-"+upper.toFixed())
-  }
-  //asiaasadsadasd
   return (
-    <div className='tausta'>
-      <h2>Heart rate limits calculator</h2>
-      <form onSubmit={calculate}>
-        <div>
-          <label>Age<br/></label>
-          <input type="number" value={age} onChange={e => setage(e.target.value)} />
-        </div>
-        <div>
-          <label>Heart rate limits<br/></label>
-          <output>{heartrate}</output>
-        </div>
-        <button>Calculate</button>
-      </form>
-    </div>
+    <>
+      <Navbar />
+      <Header />
+      <div className='container'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+      <Footer />
+    </>
   );
 }
 
