@@ -2,6 +2,6 @@
 
 This is a school assignment
 
-Tehtävä on tavoite syke 
+Tehtävä on 6. viikkotehtävä - Yhden sivun sovellus (SPA = Single page app)
 
 tekijä on Antti-Jussi Niku
